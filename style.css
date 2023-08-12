@@ -37,3 +37,16 @@ button {
     margin-right: 10px;
     width: 30px;
   }
+
+  #important{
+    display:none;
+    border-radius: var(--border-radius);
+    background: var(--code-background-color);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border : 5px solid black;
+    margin-bottom: 20px;
+  }

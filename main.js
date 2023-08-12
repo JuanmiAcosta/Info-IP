@@ -1,16 +1,17 @@
 const url = 'https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?ip=185.65.135.230';
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'd9173d6d0amsha609b0d3d697bb3p17696djsna9f1e0d22738',
-		'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '', // Aquí va la clave de la API
+        'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
+    }
 };
 
 const $form = document.querySelector('#formulario'); // "$" para indicar que es un elemento del DOM
 const $input = document.querySelector('#input-box');
 const $submit = document.querySelector('#btn');
 const $results = document.querySelector('#results');
+const $important = document.querySelector('#important');
 
 const fetchIpInfo = ip => {
     return fetch(`https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?ip=${ip}`, options) // Concatenamos ip con template string
@@ -28,15 +29,19 @@ $form.addEventListener('submit', async (event) => {
 
     $submit.setAttribute('disabled', 'true'); // Deshabilitamos el botón
     $submit.setAttribute('aria-busy', 'true'); // Deshabilitamos el botón
-    
+
     const ipInfo = await fetchIpInfo(ip); // Llamamos a la función fetchIpInfo con el valor del input
     //Cuando utilizamos un fetch se usa el await. Para utilizar await, la función debe ser async
 
-    if (ipInfo){
+    if (ipInfo) {
+        $important.style.display = 'block'; // Mostramos los datos en el DOM
+        var info = document.createElement("p");
+        info.textContent = `IP: ${ipInfo.ip} \n / Country: ${ipInfo.country_name} \n / City: ${ipInfo.city} \n / RiskLevel: ${ipInfo.risk_level}`;
+        $important.appendChild(info);
         $results.innerHTML = JSON.stringify(ipInfo, null, 2); // Mostramos los datos en el DOM
-    } 
+    }
 
-    $submit.removeAttribute('disabled'); 
+    $submit.removeAttribute('disabled');
     $submit.removeAttribute('aria-busy');
 
 });
