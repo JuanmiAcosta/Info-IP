@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>IP Información</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon/icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Handjet:wght@300&family=Raleway:wght@300&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1 style="font-family: 'Chakra Petch', sans-serif; margin-bottom: 20px;"> IP Info </h1>
+    <hr>
+    <div class="container">
+
+        <form id="formulario">
+            <label for="input-box">IP :
+                <input type="text" id="input-box" placeholder="Type an IP ... " required>
+                <small> For example : 54.85.132.205 </small>
+            </label>
+            <button type="submit" id="btn"> <img src="icon/buscar.png" alt="Icono para indicar búsqueda"> Search
+            </button>
+        </form>
+
+    </div>
+
+    <div class="container">
+        <pre id="results">
+
+        </pre>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    width: 80%;
+    margin-bottom: 20px;
+    border: 10px solid #ffffff;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 30px;
+  }
