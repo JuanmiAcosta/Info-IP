@@ -2,7 +2,7 @@ const url = 'https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?ip=185.6
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '', // Aquí va la clave de la API
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
     }
 };
@@ -34,6 +34,7 @@ $form.addEventListener('submit', async (event) => {
     //Cuando utilizamos un fetch se usa el await. Para utilizar await, la función debe ser async
 
     if (ipInfo) {
+        $important.removeChild($important.lastChild); // Borramos los datos anteriores
         $important.style.display = 'block'; // Mostramos los datos en el DOM
         var info = document.createElement("p");
         info.textContent = `IP: ${ipInfo.ip} \n / Country: ${ipInfo.country_name} \n / City: ${ipInfo.city} \n / RiskLevel: ${ipInfo.risk_level}`;
