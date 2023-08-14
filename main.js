@@ -2,7 +2,7 @@ const url = 'https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?ip=185.6
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '',
+        'X-RapidAPI-Key': '960d7feea3msh1b00942252cfb11p1c2d0fjsnec8db21e30f5',
         'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
     }
 };
@@ -37,7 +37,7 @@ $form.addEventListener('submit', async (event) => {
         $important.removeChild($important.lastChild); // Borramos los datos anteriores
         $important.style.display = 'block'; // Mostramos los datos en el DOM
         var info = document.createElement("p");
-        info.textContent = `IP: ${ipInfo.ip} \n / Country: ${ipInfo.country_name} \n / City: ${ipInfo.city} \n / RiskLevel: ${ipInfo.risk_level}`;
+        info.textContent = `IP: ${ipInfo.ip} \n / Country: ${ipInfo.country} \n / City: ${ipInfo.city} \n / RiskLevel: ${ipInfo.risk_level}`;
         $important.appendChild(info);
         $results.innerHTML = JSON.stringify(ipInfo, null, 2); // Mostramos los datos en el DOM
     }
