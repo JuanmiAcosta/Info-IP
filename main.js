@@ -2,7 +2,7 @@ const url = 'https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?ip=185.6
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '960d7feea3msh1b00942252cfb11p1c2d0fjsnec8db21e30f5',
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
     }
 };
