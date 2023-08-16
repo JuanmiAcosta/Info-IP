@@ -19,4 +19,4 @@ El proyecto está inspirado en un tutorial de @midudev. Pequeña aplicación que
 
 ## Enlace a la página :link:
 
-[https://reliable-scone-86301f.netlify.app/](https://64da8ef2b0bb2f0ca7d5c3a2--famous-strudel-59486d.netlify.app/)https://64da8ef2b0bb2f0ca7d5c3a2--famous-strudel-59486d.netlify.app/
+[https://reliable-scone-86301f.netlify.app/]
