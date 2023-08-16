@@ -7,6 +7,7 @@ El proyecto está inspirado en un tutorial de @midudev. Pequeña aplicación que
 ## Tecnologías utilizadas 🛠️ / Lenguajes de programación 👀
 
 * RapidAPI
+* Pico CSS
 * HTML5
 * CSS3
 * Javascript Vanilla
